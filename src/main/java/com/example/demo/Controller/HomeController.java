@@ -2,6 +2,7 @@ package com.example.demo.Controller;
 
 import com.example.demo.Model.Car;
 import com.example.demo.Model.Contract;
+import com.example.demo.Model.Customer;
 import com.example.demo.Service.CarService;
 import com.example.demo.Service.ContractService;
 import com.example.demo.Service.CustomerService;
@@ -111,6 +112,49 @@ public class HomeController {
     @PostMapping("/updateCar")
     public String updateCar(@ModelAttribute Car car){
         carService.updateCar(car.getCarid(),car);
+        return "redirect:/";
+    }
+
+    //THIS IS COSTUMER HOME CONTROLLER
+
+    @GetMapping("/customerIndex")
+    public String customerIndex(Model model) {
+        List<Customer> customerList = customerService.fetchAll();
+        model.addAttribute("customers",customerList);
+        return "home/customerIndex";
+    }
+    @GetMapping("/customerCreate")
+    public String customerCreate(){
+        return "home/customerCreate";
+    }
+    @PostMapping("/customerCreate")
+    public String customerCreate(@ModelAttribute Customer customer){
+        customerService.addCustomer(customer);
+        return "redirect:/";
+    }
+    @GetMapping("/customerViewOne/{customerid}")
+    public String customerViewOne(@PathVariable("customerid") int customerid, Model model){
+        model.addAttribute("customers", customerService.findCustomerById(customerid));
+        return "home/customerViewOne";
+    }
+    @GetMapping("/customerDelete/{customerid}")
+    public String customerDelete(@PathVariable("customerid") int customerid){
+        boolean deleted = customerService.deleteCustomer(customerid);
+        if(deleted){
+            return "redirect:/";
+        }else{
+            return "redirect:/";
+        }
+    }
+    @GetMapping("/customerUpdate/{customerid}")
+    public String customerUpdate(@PathVariable("customerid") int customerid, Model model){
+        model.addAttribute("customers", customerService.findCustomerById(customerid));
+        return "home/customerUpdate";
+    }
+
+    @PostMapping("/updateCustomer")
+    public String updateCustomer(@ModelAttribute Customer customer){
+        customerService.updateCustomer(customer.getCustomerid(),customer);
         return "redirect:/";
     }
 }

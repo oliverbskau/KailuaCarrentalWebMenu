@@ -29,7 +29,7 @@ public class CustomerService {
         return customerRepo.deleteCustomer(customerid);
     }
 
-    public Customer updateContract(int customerid, Customer c) {
+    public Customer updateCustomer(int customerid, Customer c) {
         return customerRepo.updateCustomer(customerid,c);
     }
 }
