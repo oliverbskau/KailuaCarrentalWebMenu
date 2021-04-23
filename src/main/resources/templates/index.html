@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Kailua Car Rental</title>
@@ -11,7 +11,21 @@
 
     <div style="float: left"></div>
 
-
-
+    <table>
+        <thead>
+        <tr>
+            <th>Rental contract ID</th>
+            <th>Customer ID</th>
+            <th>Car ID</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="contract: ${rentalcontract}">
+            <td th:text="{contract.rentalcontract_id"}/>
+            <td th:text="{contract.ownerid"}/>
+            <td th:text="{contract.carid"}/>
+        </tr>
+        </tbody>
+    </table>
 </body>
 </html>
