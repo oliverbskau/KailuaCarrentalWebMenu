@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Car details</title>
+</head>
+<body>
+<h1>Car details</h1>
+
+Brand: <span th:text="${car.brand}"/><br>
+Model: <span th:text="${car.model}"/><br>
+Class: <span th:text="${car.carclass}"/><br>
+Fuel type: <span th:text="${car.fueltype}"/><br>
+Driven km: <span th:text="${car.driven_km}"/><br>
+Year: <span th:text="${car.first_registration_year}"/><br>
+Price: <span th:text="${car.price}"/> kr. (6 months) <br>
+
+</body>
+</html>

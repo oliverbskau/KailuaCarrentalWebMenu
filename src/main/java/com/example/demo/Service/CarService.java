@@ -9,27 +9,21 @@ import java.util.List;
 
 @Service
 public class CarService {
-
     @Autowired
     CarRepo carRepo;
-
-    public List<Car> fetchAll() {
-        return null;
+    public List<Car> fetchAll(){
+        return carRepo.fetchAll();
     }
-
-    public Car addCar(Car car) {
-        return null;
+    public Car addCar(Car c){
+        return carRepo.addCar(c);
     }
-
-    public Car findCarById(int carid) {
-        return null;
+    public Car findCarById(int carid){
+        return carRepo.findCarById(carid);
     }
-
-    public Boolean deleteCar(int carid) {
-        return null;
+    public Boolean deleteCar(int carid){
+        return carRepo.deleteCar(carid);
     }
-
-    public Car updateCar(int carid, Car car) {
-        return null;
+    public Car updateCar(int carid, Car c){
+        return carRepo.updateCar(carid,c);
     }
 }

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Car Rental</title>
+    <link rel="stylesheet" type="text/css" href="MyCss.css">
+</head>
+<body>
+<h1>Car Rental</h1>
+<h2>Cars in stock</h2>
+<a href="/carCreate">
+    <button class="btn-create" id="btn-create">Assign new car</button>
+</a>
+
+<table>
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Brand</th>
+        <th>Model</th>
+        <th>Car class</th>
+        <th>Fuel Type</th>
+        <th>Driven Km</th>
+        <th>First registration year</th>
+        <th>Price</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="car: ${cars}">
+        <td th:text="${car.carid}" />
+        <td th:text="${car.brand}" />
+        <td th:text="${car.model}" />
+        <td th:text="${car.carclass}" />
+        <td th:text="${car.fueltype}" />
+        <td th:text="${car.driven_km}" />
+        <td th:text="${car.first_registration_year}" />
+        <td th:text="${car.price}" />
+
+        <td>
+            <a th:href="@{'/carViewOne/'+${car.carid}}">
+                <button class="car-btn-viewOne", id="btn-viewOne">Details</button>
+            </a>
+            <a th:href="@{'/carDelete/'+${car.carid}}">
+                <button class="car-btn-delete", id="btn-delete">Delete</button>
+            </a>
+            <a th:href="@{'/carUpdate/'+${car.carid}}">
+                <button class="car-btn-update", id="btn-update">Edit</button>
+            </a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

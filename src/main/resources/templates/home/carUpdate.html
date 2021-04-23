@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit</title>
+</head>
+<body>
+<h1>Edit car</h1>
+
+<form action="/updateCar" method="post">
+    <input type="text" name="carid" th:value="${car.carid}">
+    <input type="text" name="brand" th:value="${car.brand}">
+    <input type="text" name="model" th:value="${car.model}">
+    <input type="text" name="carclass" th:value="${car.carclass}">
+    <input type="text" name="fueltype" th:value="${car.fueltype}">
+    <input type="text" name="driven_km" th:value="${car.driven_km}">
+    <input type="text" name="first_registration_year" th:value="${car.first_registration_year}">
+    <input type="text" name="price" th:value="${car.price}">
+    <input type="submit" value="Save changes">
+</form>
+</body>
+</html>
