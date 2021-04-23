@@ -18,6 +18,11 @@ public class HomeController {
     CarService carService;
 
     @GetMapping("/")
+    public String index(Model model) {
+        return "home/index";
+    }
+
+    @GetMapping("/carIndex")
     public String carIndex(Model model) {
         List<Car> carList = carService.fetchAll();
         model.addAttribute("cars",carList);
