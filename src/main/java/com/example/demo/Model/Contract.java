@@ -1,8 +1,12 @@
 package com.example.demo.Model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Contract {
 
-
+    @Id
     private int rentalcontract_id;
     private int customerid;
     private int carid;
@@ -12,6 +16,7 @@ public class Contract {
         this.customerid = customerid;
         this.carid = carid;
     }
+
     public Contract(){
     }
 
