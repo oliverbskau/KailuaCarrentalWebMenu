@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>Edit Contract</h1>
+
+<form action="/updateContract" method="post">
+    <input type="text" name="rentalcontract_id" th:value="${contract.rentalcontract_id}">
+    <input type="text" name="customerid" th:value="${contract.customerid}">
+    <input type="text" name="carid" th:value="${contract.carid}">
+
+    <input type="submit" value="Save changes">
+</form>
+
+</body>
+</html>
