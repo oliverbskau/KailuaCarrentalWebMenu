@@ -1,4 +1,11 @@
-#font-paste {
-    font-family: Courier, helvetica, Arial, serif;
+#font-title {
+    font-family: Courier, Arial, serif;
     color: dodgerblue;
+}
+.font-subtitle {
+    font-family: Courier, Arial, serif;
+    color: dodgerblue;
+}
+tr {
+    background-color: cornflowerblue;
 }

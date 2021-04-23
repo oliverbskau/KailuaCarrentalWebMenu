@@ -1,14 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Kailua Car Rental</title>
 </head>
 <body>
-    <h1 id="font-paste">Welcome to Kailua Car Rental</h1>
-    <h4>Here you can create a rental contract</h4>
+    <h1 class="font-paste">Welcome to Kailua Car Rental</h1>
+    <h4 class="font-paste">Here you can create a rental contract by adding yourself as a user
+        and the cars rented to your name</h4>
 
     <div style="float: left"></div>
 
+    <table>
+        <thead>
+        <tr>
+            <th>Rental contract ID</th>
+            <th>Customer ID</th>
+            <th>Car ID</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="contract: ${rentalcontract}">
+            <td th:text="{contract.rentalcontract_id"}/>
+            <td th:text="{contract.ownerid"}/>
+            <td th:text="{contract.carid"}/>
+        </tr>
+        </tbody>
+    </table>
 </body>
 </html>
