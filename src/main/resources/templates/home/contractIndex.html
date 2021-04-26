@@ -5,11 +5,16 @@
     <title>Contracts</title>
 </head>
 <body>
+    <h2>Contract list</h2>
     <h1 class="font-paste">Edit contracts</h1>
     <h4 class="font-paste">Here you can create a rental contract by adding yourself as a user
         and the cars rented to your name</h4>
 
     <div style="float: left"></div>
+
+    <a href="/contractCreate">
+        <button class="contract-btn-create" id="contract-btn-create">Assign new car</button>
+    </a>
 
     <table>
         <thead>
@@ -20,10 +25,22 @@
         </tr>
         </thead>
         <tbody>
-        <tr th:each="contract: ${rentalcontract}">
+        <tr th:each="contract: ${contracts}">
             <td th:text="{contract.rentalcontract_id"}/>
             <td th:text="{contract.customerid"}/>
             <td th:text="{contract.carid"}/>
+
+            <td>
+                <a th:href="@{'/contactViewOne/'+${contract.rentalcontract_id}}">
+                    <button class="contract-btn-viewOne", id="contract-btn-viewOne">Details</button>
+                </a>
+                <a th:href="@{'/contractDelete/'+${contract.rentalcontract_id}}">
+                    <button class="contract-btn-delete", id="contract-btn-delete">Delete</button>
+                </a>
+                <a th:href="@{'/contractUpdate/'+${contract.rentalcontract_id}}">
+                    <button class="contract-btn-update", id="contract-btn-update">Edit</button>
+                </a>
+            </td>
         </tr>
         </tbody>
     </table>

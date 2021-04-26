@@ -16,8 +16,8 @@ public class CarRepo {
 
     public List<Car> fetchAll(){
         String sql = "SELECT * FROM cars";
-        RowMapper<Car> rowMapper = new BeanPropertyRowMapper<>(Car.class);
-        return template.query(sql,rowMapper);
+        RowMapper<Car> cars = new BeanPropertyRowMapper<>(Car.class);
+        return template.query(sql,cars);
     }
     public Car addCar(Car c){
         String sql = "INSERT INTO cars(carid, brand, model, carclass, fueltype, driven_km, first_registration_year, price) values(?,?,?,?,?,?,?,?)";

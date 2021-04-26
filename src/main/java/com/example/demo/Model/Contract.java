@@ -11,14 +11,15 @@ public class Contract {
     private int customerid;
     private int carid;
 
+    public Contract(){}
+
     public Contract(int rentalcontract_id, int customerid, int carid) {
         this.rentalcontract_id = rentalcontract_id;
         this.customerid = customerid;
         this.carid = carid;
     }
 
-    public Contract(){
-    }
+
 
     public int getRentalcontract_id() {
         return rentalcontract_id;

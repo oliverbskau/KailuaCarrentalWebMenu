@@ -3,27 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="MyCss.css">
+    <style>
+        #assignCarWrapper{
+            width: 200px;
+            margin: auto;
+            background-color: lightgray;
+            border: black solid 1px;
+        }
+        #assignCarWrapper form input{
+            margin: auto;
+            padding: 5px;
+            border: grey solid 1px;
+        }
+    </style>
 </head>
 <body>
 <h1>Assign a new car</h1>
 
-<form action="/carCreate" method="post">
-    <label>Enter Brand</label>
-    <input type="text" name="brand" placeholder="Brand">
-    <label>Enter Model</label>
-    <input type="text" name="model" placeholder="xxxxxxxxx">
-    <label>Enter Class</label>
-    <input type="text" name="carclass" placeholder="Family/Sport/Luxury">
-    <label>Enter Fuel Type</label>
-    <input type="text" name="fueltype" placeholder="diesel/gas/el/hybrid">
-    <label>Enter Km</label>
-    <input type="text" name="driven_km" placeholder="xxxx + km">
-    <label>Enter Year</label>
-    <input type="text" name="first_registration_year" placeholder="xxxx">
-    <label>Enter Price</label>
-    <input type="text" name="price" placeholder="price (only numbers)">
+<div id="assignCarWrapper">
+    <form action="/carCreate" method="post">
+        <label>Enter Brand</label>
+        <input type="text" name="brand" placeholder="Brand">
+        <label>Enter Model</label>
+        <input type="text" name="model" placeholder="xxxxxxxxx">
+        <label>Enter Class</label>
+        <input type="text" name="carclass" placeholder="Family/Sport/Luxury">
+        <label>Enter Fuel Type</label>
+        <input type="text" name="fueltype" placeholder="diesel/gas/el/hybrid">
+        <label>Enter Km</label>
+        <input type="text" name="driven_km" placeholder="xxxx + km">
+        <label>Enter Year</label>
+        <input type="text" name="first_registration_year" placeholder="xxxx">
+        <label>Enter Price</label>
+        <input type="text" name="price" placeholder="price (only numbers)">
 
-    <input style="background-color:  lightcyan" type="submit" value="Assign">
-</form>
+        <input style="background-color:  lightcyan" type="submit" value="Assign">
+    </form>
+
+</div>
+
 </body>
 </html>
