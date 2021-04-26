@@ -20,7 +20,9 @@ import java.util.List;
 public class HomeController {
     @Autowired
     CarService carService;
+    @Autowired
     ContractService contractService;
+    @Autowired
     CustomerService customerService;
 
 
@@ -52,16 +54,16 @@ public class HomeController {
         return "redirect:/";
     }
     //View a single contract on a new page, linked by its id. example: localhost:5555/contractViewOne/1,2,3....
-    @GetMapping("/contractViewOne/{rentalcontract_id}")
-    public String contractViewOne(@PathVariable("rentalcontract_id") int rentalcontract_id, Model model){
-        model.addAttribute("contracts", contractService.findContractById(rentalcontract_id));
+    @GetMapping("/contractViewOne/{rentalcontractid}")
+    public String contractViewOne(@PathVariable("rentalcontractid") int rentalcontractid, Model model){
+        model.addAttribute("contracts", contractService.findContractById(rentalcontractid));
         return "home/contractViewOne";
     }
 
     //return to homepage once a contract is deleted. Either way if contract is deleted or not, the user will be redirected back to home page (index)
-    @GetMapping("/contractDelete/{rentalcontract_id}")
-    public String contractDelete(@PathVariable("rentalcontract_id") int rentalcontract_id){
-        boolean deleted = contractService.deleteContract(rentalcontract_id);
+    @GetMapping("/contractDelete/{rentalcontractid}")
+    public String contractDelete(@PathVariable("rentalcontractid") int rentalcontractid){
+        boolean deleted = contractService.deleteContract(rentalcontractid);
         if(deleted){
             return "redirect:/";
         }else{
@@ -69,15 +71,15 @@ public class HomeController {
         }
     }
     //Update a contract on a new page...
-    @GetMapping("/contactUpdate/{rentalcontract_id}")
-    public String contractUpdate(@PathVariable("rentalcontract_id") int rentalcontract_id, Model model){
-        model.addAttribute("contracts", contractService.findContractById(rentalcontract_id));
+    @GetMapping("/contactUpdate/{rentalcontractid}")
+    public String contractUpdate(@PathVariable("rentalcontractid") int rentalcontractid, Model model){
+        model.addAttribute("contracts", contractService.findContractById(rentalcontractid));
         return "home/contractUpdate";
     }
     //... redirect to home page(index) when updated
     @PostMapping("/updateContract")
     public String updateContract(@ModelAttribute Contract contract){
-        contractService.updateContract(contract.getRentalcontract_id(),contract);
+        contractService.updateContract(contract.getRentalcontractid(),contract);
         return "redirect:/";
     }
 

@@ -7,26 +7,26 @@ import javax.persistence.Id;
 public class Contract {
 
     @Id
-    private int rentalcontract_id;
+    private int rentalcontractid;
     private int customerid;
     private int carid;
 
     public Contract(){}
 
-    public Contract(int rentalcontract_id, int customerid, int carid) {
-        this.rentalcontract_id = rentalcontract_id;
+    public Contract(int rentalcontractid, int customerid, int carid) {
+        this.rentalcontractid = rentalcontractid;
         this.customerid = customerid;
         this.carid = carid;
     }
 
 
 
-    public int getRentalcontract_id() {
-        return rentalcontract_id;
+    public int getRentalcontractid() {
+        return rentalcontractid;
     }
 
-    public void setRentalcontract_id(int rentalcontract_id) {
-        this.rentalcontract_id = rentalcontract_id;
+    public void setRentalcontractid(int rentalcontract_id) {
+        this.rentalcontractid = rentalcontract_id;
     }
 
     public int getCustomerid() {

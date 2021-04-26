@@ -24,27 +24,27 @@ public class ContractRepo {
     }
 
     public Contract addContract(Contract c) {
-        String sql = "INSERT INTO rentalcontracts(rentalcontract_id,customerid,carid) VALUES(?,?,?)";
-        template.update(sql,c.getRentalcontract_id(),c.getCustomerid(),c.getCustomerid());
+        String sql = "INSERT INTO rentalcontracts(rentalcontractid,customerid,carid) VALUES(?,?,?)";
+        template.update(sql,c.getRentalcontractid(),c.getCustomerid(),c.getCustomerid());
 
         return null;
     }
 
     public Contract findContractById(int contractid) {
-        String sql = "SELECT * FROM rentalcontracts WHERE rentalcontract_id = ?";
+        String sql = "SELECT * FROM rentalcontracts WHERE rentalcontractid = ?";
         RowMapper<Contract> contracts = new BeanPropertyRowMapper<>(Contract.class);
         Contract c = template.queryForObject(sql, contracts, contractid);
 
         return c;
     }
 
-    public Boolean deleteContract(int contractid) {
-        String sql = "DELETE FROM rentalcontracts WHERE rentalcontract_id = ?";
+    public Boolean deleteContract(int rentalcontractid) {
+        String sql = "DELETE FROM rentalcontracts WHERE rentalcontractid = ?";
 
-        return template.update(sql,contractid) < 0;
+        return template.update(sql,rentalcontractid) < 0;
     }
 
-    public Contract updateContract(int contractid, Contract c) {
+    public Contract updateContract(int rentalcontractid, Contract c) {
         String sql = "UPDATE rentalcontracts SET customerid = ?, carid = ?";
         template.update(sql,c.getCustomerid(),c.getCarid());
         return null;

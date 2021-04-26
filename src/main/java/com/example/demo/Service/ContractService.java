@@ -22,15 +22,15 @@ public class ContractService {
         return contractRepo.addContract(c);
     }
 
-    public Contract findContractById(int rentalcontract_id) {
-        return contractRepo.findContractById(rentalcontract_id);
+    public Contract findContractById(int rentalcontractid) {
+        return contractRepo.findContractById(rentalcontractid);
     }
 
-    public Boolean deleteContract(int rentalcontract_id) {
-        return contractRepo.deleteContract(rentalcontract_id);
+    public Boolean deleteContract(int rentalcontractid) {
+        return contractRepo.deleteContract(rentalcontractid);
     }
 
-    public Contract updateContract(int rentalcontract_id, Contract c) {
-        return contractRepo.updateContract(rentalcontract_id,c);
+    public Contract updateContract(int rentalcontractid, Contract c) {
+        return contractRepo.updateContract(rentalcontractid,c);
     }
 }
