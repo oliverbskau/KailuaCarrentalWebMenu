@@ -3,12 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Customers</title>
+    <link rel="stylesheet" type="text/css" href="Tables.css">
+
 </head>
 <body>
-<h1>Customers list</h1>
+<div id="indexHeader">
+    <h1>Customer list</h1>
+</div>
 
+<div style="float: left"></div>
 <a href="/customerCreate">
-    <button class="customer-btn-create" id="customer-btn-create">Assign new customer</button>
+    <button class="btn-create" id="btn-create">Assign new customer</button>
 </a>
 
 <table>
@@ -37,17 +42,17 @@
         <td th:text="${customer.zipcode}" />
 
         <td>
-            <a th:href="@{'/customerViewOne/'+${customer.customerid}}">
-                <button class="btn-viewOne", id="customer-btn-viewOne">Details</button>
-            </a>
-            <a th:href="@{'/customerDelete/'+${customer.customerid}}">
-                <button class="btn-delete", id="customer-btn-delete">Delete</button>
-            </a>
-            <a th:href="@{'/customerUpdate/'+${customer.customerid}}">
-                <button class="btn-update", id="customer-btn-update">Edit</button>
-            </a>
-        </td>
-    </tr>
+                 <a th:href="@{'/customerViewOne/'+${customer.customerid}}">
+                     <button class="btn-viewOne", id="btn-viewOne">Details</button>
+                 </a>
+                 <a th:href="@{'/customerDelete/'+${customer.customerid}}">
+                     <button class="btn-delete", id="btn-delete">Delete</button>
+                 </a>
+                  <a th:href="@{'/customerUpdate/'+${customer.customerid}}">
+                      <button class="btn-update", id="btn-update">Edit</button>
+                 </a>
+            </td>
+         </tr>
     </tbody>
 </table>
 </body>

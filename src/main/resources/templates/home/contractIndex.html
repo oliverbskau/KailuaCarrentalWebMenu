@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Contracts</title>
+    <link rel="stylesheet" type="text/css" href="Tables.css">
+
 </head>
 <body>
-    <h2>Contract list</h2>
-    <h1 class="font-paste">Edit contracts</h1>
-    <h4 class="font-paste">Here you can create a rental contract by adding yourself as a user
-        and the cars rented to your name</h4>
+<div id="indexHeader">
+    <h1>Contract list</h1>
+</div>
 
     <div style="float: left"></div>
-
     <a href="/contractCreate">
-        <button class="contract-btn-create" id="contract-btn-create">Assign new contract</button>
+        <button class="btn-create" id="btn-create">Assign new contract</button>
     </a>
 
     <table>
@@ -22,23 +22,24 @@
             <th>Rental contract ID</th>
             <th>Customer ID</th>
             <th>Car ID</th>
+            <th></th>
         </tr>
         </thead>
         <tbody>
         <tr th:each="contract: ${contracts}">
-            <td th:text="${contract.rentalcontractid}"/>
-            <td th:text="${contract.customerid}"/>
-            <td th:text="${contract.carid}"/>
+            <td th:text="${contract.rentalcontractid}" />
+            <td th:text="${contract.customerid}" />
+            <td th:text="${contract.carid}" />
 
             <td>
                 <a th:href="@{'/contractViewOne/'+${contract.rentalcontractid}}">
-                    <button class="btn-viewOne", id="contract-btn-viewOne">Details</button>
+                    <button class="btn-viewOne", id="btn-viewOne">Details</button>
                 </a>
                 <a th:href="@{'/contractDelete/'+${contract.rentalcontractid}}">
-                    <button class="btn-delete", id="contract-btn-delete">Delete</button>
+                    <button class="btn-delete", id="btn-delete">Delete</button>
                 </a>
                 <a th:href="@{'/contractUpdate/'+${contract.rentalcontractid}}">
-                    <button class="btn-update", id="contract-btn-update">Edit</button>
+                    <button class="btn-update", id="btn-update">Edit</button>
                 </a>
             </td>
         </tr>

@@ -35,3 +35,9 @@ tr:nth-child(even){
 #btn-update{
     background-color: #86d7d7;
 }
+
+#indexHeader{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
