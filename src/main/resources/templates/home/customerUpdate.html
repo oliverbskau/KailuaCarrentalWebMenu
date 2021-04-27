@@ -3,18 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        input[type=text] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type=submit] {
+            width: 100%;
+            background-color: powderblue;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: cadetblue;
+        }
+    </style>
 </head>
 <body>
 
 <h1>Edit Customer</h1>
 
 <form action="/updateCustomer" method="post">
+    <label>First name</label>
     <input type="text" name="first_name" th:value="${customer.first_name}">
+    <label>Last name</label>
     <input type="text" name="last_name" th:value="${customer.last_name}">
+    <label>Phonenumber</label>
     <input type="text" name="phonenumber" th:value="${customer.phonenumber}">
+    <label>Email</label>
     <input type="text" name="email" th:value="${customer.email}">
+    <label>Drivers license Number</label>
     <input type="text" name="drivers_license_number" th:value="${customer.drivers_license_number}">
+    <label>Address</label>
     <input type="text" name="address" th:value="${customer.address}">
+    <label>Zipcode</label>
     <input type="text" name="zipcode" th:value="${customer.zipcode}">
     <input type="submit" value="Save changes">
 </form>

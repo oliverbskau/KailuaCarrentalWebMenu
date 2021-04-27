@@ -3,14 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <title>Edit Contract</title>
+    <style>
+        input[type=text] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type=submit] {
+            width: 100%;
+            background-color: powderblue;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: cadetblue;
+        }
+    </style>
 </head>
 <body>
 
 <h1>Edit Contract</h1>
 
 <form action="/updateContract" method="post">
+    <label>Rentalcontract id</label>
     <input type="text" name="rentalcontractid" th:value="${contract.rentalcontractid}">
+    <label>Customer id</label>
     <input type="text" name="customerid" th:value="${contract.customerid}">
+    <label>Car id</label>
     <input type="text" name="carid" th:value="${contract.carid}">
 
     <input type="submit" value="Save changes">
