@@ -3,18 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <title>Customer details</title>
+    <link rel="stylesheet" type="text/css" href="ViewOne.css">
 </head>
 <body>
 
 <h1>Customer details</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Phonenumber</th>
+            <th>Email</th>
+            <th>Drivers License Number</th>
+            <th>Address</th>
+            <th>Zipcode</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td th:text="${customer.first_name}"/>
+            <td th:text="${customer.last_name}"/>
+            <td th:text="${customer.phonenumber}"/>
+            <td th:text="${customer.email}"/>
+            <td th:text="${customer.drivers_license_number}"/>
+            <td th:text="${customer.address}"/>
+            <td th:text="${customer.zipcode}"/>
+        </tr>
+    </tbody>
+</table>
 
-Firstname: <span th:text="${customer.first_name}"/><br>
-Lastname: <span th:text="${customer.last_name}"/><br>
-Phonenumber: <span th:text="${customer.phonenumber}"/><br>
-Email: <span th:text="${customer.email}"/><br>
-Drivers License Number: <span th:text="${customer.drivers_license_number}"/><br>
-Address: <span th:text="${customer.address}"/><br>
-Zipcode: <span th:text="${customer.zipcode}"/><br>
 
 </body>
 </html>
