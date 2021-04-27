@@ -56,7 +56,7 @@ public class HomeController {
     //View a single contract on a new page, linked by its id. example: localhost:5555/contractViewOne/1,2,3....
     @GetMapping("/contractViewOne/{rentalcontractid}")
     public String contractViewOne(@PathVariable("rentalcontractid") int rentalcontractid, Model model){
-        model.addAttribute("contracts", contractService.findContractById(rentalcontractid));
+        model.addAttribute("contract", contractService.findContractById(rentalcontractid));
         return "home/contractViewOne";
     }
 
@@ -71,9 +71,9 @@ public class HomeController {
         }
     }
     //Update a contract on a new page...
-    @GetMapping("/contactUpdate/{rentalcontractid}")
+    @GetMapping("/contractUpdate/{rentalcontractid}")
     public String contractUpdate(@PathVariable("rentalcontractid") int rentalcontractid, Model model){
-        model.addAttribute("contracts", contractService.findContractById(rentalcontractid));
+        model.addAttribute("contract", contractService.findContractById(rentalcontractid));
         return "home/contractUpdate";
     }
     //... redirect to home page(index) when updated
@@ -162,7 +162,7 @@ public class HomeController {
     //View a single customer on a new page, linked by its id. example: localhost:5555/customerViewOne/1,2,3....
     @GetMapping("/customerViewOne/{customerid}")
     public String customerViewOne(@PathVariable("customerid") int customerid, Model model){
-        model.addAttribute("customers", customerService.findCustomerById(customerid));
+        model.addAttribute("customer", customerService.findCustomerById(customerid));
         return "home/customerViewOne";
     }
 
@@ -180,7 +180,7 @@ public class HomeController {
     //Update a customer on a new page...
     @GetMapping("/customerUpdate/{customerid}")
     public String customerUpdate(@PathVariable("customerid") int customerid, Model model){
-        model.addAttribute("customers", customerService.findCustomerById(customerid));
+        model.addAttribute("customer", customerService.findCustomerById(customerid));
         return "home/customerUpdate";
     }
 

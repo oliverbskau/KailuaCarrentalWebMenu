@@ -31,7 +31,7 @@
             <td th:text="${contract.carid}"/>
 
             <td>
-                <a th:href="@{'/contactViewOne/'+${contract.rentalcontractid}}">
+                <a th:href="@{'/contractViewOne/'+${contract.rentalcontractid}}">
                     <button class="contract-btn-viewOne", id="contract-btn-viewOne">Details</button>
                 </a>
                 <a th:href="@{'/contractDelete/'+${contract.rentalcontractid}}">

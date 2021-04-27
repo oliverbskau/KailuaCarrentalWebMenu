@@ -12,20 +12,20 @@ public class Customer {
     private String last_name;
     private String phonenumber;
     private String email;
-    private String driver_license_number;
+    private String drivers_license_number;
     private String address;
     private String zipcode;
 
 
     public Customer(){}
 
-    public Customer(int customerid, String first_name, String last_name, String phonenumber, String email, String driver_license_number, String address, String zipcode) {
+    public Customer(int customerid, String first_name, String last_name, String phonenumber, String email, String drivers_license_number, String address, String zipcode) {
         this.customerid = customerid;
         this.first_name = first_name;
         this.last_name = last_name;
         this.phonenumber = phonenumber;
         this.email = email;
-        this.driver_license_number = driver_license_number;
+        this.drivers_license_number = drivers_license_number;
         this.address = address;
         this.zipcode = zipcode;
     }
@@ -71,12 +71,12 @@ public class Customer {
         this.email = email;
     }
 
-    public String getDriver_license_number() {
-        return driver_license_number;
+    public String getDrivers_license_number() {
+        return drivers_license_number;
     }
 
-    public void setDriver_license_number(String driver_license_number) {
-        this.driver_license_number = driver_license_number;
+    public void setDrivers_license_number(String drivers_license_number) {
+        this.drivers_license_number = drivers_license_number;
     }
 
     public String getAddress() {
