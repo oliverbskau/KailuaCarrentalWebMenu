@@ -3,20 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>Edit Car</title>
+    <link rel="stylesheet" type="text/css" href="Update.css">
 </head>
 <body>
 <h1>Edit car</h1>
-
+<div id="updatediv">
 <form action="/updateCar" method="post">
+    <label>Car id</label>
     <input type="text" name="carid" th:value="${car.carid}">
+    <label>Brand</label>
     <input type="text" name="brand" th:value="${car.brand}">
+    <label>Model</label>
     <input type="text" name="model" th:value="${car.model}">
+    <label>Car Class</label>
     <input type="text" name="carclass" th:value="${car.carclass}">
+    <label>Fueltype</label>
     <input type="text" name="fueltype" th:value="${car.fueltype}">
+    <label>Driven km</label>
     <input type="text" name="driven_km" th:value="${car.driven_km}">
+    <label>First Registration Year</label>
     <input type="text" name="first_registration_year" th:value="${car.first_registration_year}">
+    <label>Price</label>
     <input type="text" name="price" th:value="${car.price}">
     <input type="submit" value="Save changes">
 </form>
+</div>
 </body>
 </html>

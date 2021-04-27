@@ -36,7 +36,7 @@ public class CarRepo {
         return template.update(sql, carid) < 0;
     }
     public Car updateCar(int carid, Car c){
-        String sql = "UPDATE cars SET brand = ?, model = ?, carclass = ?, fueltype = ?, driven_km = ?, first_registartion_year = ?, price = ? WHERE carid = ?";
+        String sql = "UPDATE cars SET brand = ?, model = ?, carclass = ?, fueltype = ?, driven_km = ?, first_registration_year = ?, price = ? WHERE carid = ?";
         template.update(sql,c.getBrand(),c.getModel(),c.getCarclass(),c.getFueltype(),
                 c.getDriven_km(),c.getFirst_registration_year(),c.getPrice(),c.getCarid());
         return null;
