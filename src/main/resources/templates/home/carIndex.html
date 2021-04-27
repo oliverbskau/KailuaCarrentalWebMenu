@@ -3,13 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Car Rental</title>
+    <link rel="stylesheet" type="text/css" href="Tables.css">
 
 </head>
 <body>
-<h1>Car Rental</h1>
-<h2>Cars in stock</h2>
+<div id="indexHeader">
+    <h1>Car list</h1>
+</div>
+
+
+
+<div style="float: left"></div>
 <a href="/carCreate">
-    <button class="car-btn-create" id="car-btn-create">Assign new car</button>
+    <button class="btn-create" id="btn-create">Assign new car</button>
 </a>
 
 <table>
@@ -39,13 +45,13 @@
 
         <td>
             <a th:href="@{'/carViewOne/'+${car.carid}}">
-                <button class="btn-viewOne", id="car-btn-viewOne">Details</button>
+                <button class="btn-viewOne", id="btn-viewOne">Details</button>
             </a>
             <a th:href="@{'/carDelete/'+${car.carid}}">
-                <button class="btn-delete", id="car-btn-delete">Delete</button>
+                <button class="btn-delete", id="btn-delete">Delete</button>
             </a>
             <a th:href="@{'/carUpdate/'+${car.carid}}">
-                <button class="btn-update", id="car-btn-update">Edit</button>
+                <button class="btn-update", id="btn-update">Edit</button>
             </a>
         </td>
     </tr>
