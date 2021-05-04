@@ -1,5 +1,5 @@
 #topBar {
-    height: 50px;
+    height: 62px;
     width: auto;
     background-color: red;
 
@@ -15,4 +15,6 @@
     text-decoration: none;
     font-size: 16px;
     display: inline-block;
+    padding-top: 12px;
+    padding-left: 25px;
 }
