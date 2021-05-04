@@ -6,34 +6,32 @@
     <link rel="stylesheet" type="text/css" href="ViewOne.css">
 </head>
 <body>
-
 <h1>Customer details</h1>
-<table>
+<table style="border-collapse: collapse; width: 40%;">
     <thead>
-        <tr>
-            <th>Id</th>
-            <th>Firstname</th>
-            <th>Lastname</th>
-            <th>Phonenumber</th>
-            <th>Email</th>
-            <th>Drivers License Number</th>
-            <th>Address</th>
-            <th>Zipcode</th>
+        <tr style="background-color: lightblue;">
+            <th style="border: 1px solid black; text-align: left; padding: 4px; margin: auto">Id</th>
+            <th style="border: 1px solid black; text-align: left; padding: 4px; margin: auto">Firstname</th>
+            <th style="border: 1px solid black; text-align: left; padding: 4px; margin: auto">Lastname</th>
+            <th style="border: 1px solid black; text-align: left; padding: 4px; margin: auto">Phonenumber</th>
+            <th style="border: 1px solid black; text-align: left; padding: 4px; margin: auto">Email</th>
+            <th style="border: 1px solid black; text-align: left; padding: 4px; margin: auto">Driver License number</th>
+            <th style="border: 1px solid black; text-align: left; padding: 4px; margin: auto">Address</th>
+            <th style="border: 1px solid black; text-align: left; padding: 4px; margin: auto">Zipcode</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td th:text="${customer.first_name}"/>
-            <td th:text="${customer.last_name}"/>
-            <td th:text="${customer.phonenumber}"/>
-            <td th:text="${customer.email}"/>
-            <td th:text="${customer.drivers_license_number}"/>
-            <td th:text="${customer.address}"/>
-            <td th:text="${customer.zipcode}"/>
+            <td style="border: 1px solid black; text-align: left; padding: 4px; margin: auto" th:text="${customer.customerid}" />
+            <td style="border: 1px solid black; text-align: left; padding: 4px; margin: auto" th:text="${customer.first_name}"/>
+            <td style="border: 1px solid black; text-align: left; padding: 4px; margin: auto" th:text="${customer.last_name}"/>
+            <td style="border: 1px solid black; text-align: left; padding: 4px; margin: auto" th:text="${customer.phonenumber}"/>
+            <td style="border: 1px solid black; text-align: left; padding: 4px; margin: auto" th:text="${customer.email}"/>
+            <td style="border: 1px solid black; text-align: left; padding: 4px; margin: auto" th:text="${customer.drivers_license_number}"/>
+            <td style="border: 1px solid black; text-align: left; padding: 4px; margin: auto" th:text="${customer.address}"/>
+            <td style="border: 1px solid black; text-align: left; padding: 4px; margin: auto" th:text="${customer.zipcode}"/>
         </tr>
     </tbody>
 </table>
-
-
 </body>
 </html>
