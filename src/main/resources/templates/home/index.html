@@ -3,28 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <title>Kailua car rental</title>
+    <link rel="stylesheet" type="text/css" href="FrontPage.css">
 
 </head>
 <body>
 
-<h1>Welcome to Kailua car rental</h1>
-
 <div class="header">
-    <form action="/carIndex">
-        <button >
-            View Cars
-        </button>
-    </form>
-    <form action="/customerIndex">
-        <button >
-            View Customers
-        </button>
-    </form>
-    <form action="/contractIndex">
-        <button >
-            View Contracts
-        </button>
-    </form>
+    <div id="topBar" >
+        <a href="carIndex.html">
+            <img src="KailuaLogo.png" alt="KailuaLogoBtn" width="75" height="75">
+        </a>
+        <form action="/carIndex" class="topButton">
+            <button >
+                View Cars
+            </button>
+        </form>
+        <form action="/customerIndex" class="topButton">
+            <button >
+                View Customers
+            </button>
+        </form>
+        <form action="/contractIndex" class="topButton">
+            <button >
+                View Contracts
+            </button>
+        </form>
+    </div>
+    <h1>Welcome to Kailua car rental</h1>
 </div>
 </body>
 </html>
