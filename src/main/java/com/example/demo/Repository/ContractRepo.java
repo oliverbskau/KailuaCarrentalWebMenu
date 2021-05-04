@@ -45,8 +45,8 @@ public class ContractRepo {
     }
 
     public Contract updateContract(int rentalcontractid, Contract c) {
-        String sql = "UPDATE rentalcontracts SET customerid = ?, carid = ?";
-        template.update(sql,c.getCustomerid(),c.getCarid());
+        String sql = "UPDATE rentalcontracts SET customerid = ?, carid = ? WHERE rentalcontractid = ?";
+        template.update(sql,c.getCustomerid(),c.getCarid(),c.getRentalcontractid());
         return null;
     }
 }
