@@ -25,7 +25,7 @@ public class CustomerRepo {
 
     public Customer addCustomer(Customer c) {
         String sql = "INSERT INTO customers(first_name,last_name,phonenumber,email,drivers_license_number,address,zipcode) " +
-                "VALUES(?,?,?,?,?,?,?,?)";
+                "VALUES(?,?,?,?,?,?,?)";
         template.update(sql,c.getFirst_name(),c.getLast_name(),c.getPhonenumber(),c.getEmail(),
                 c.getDrivers_license_number(), c.getAddress(),c.getZipcode());
 
