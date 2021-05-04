@@ -1,13 +1,13 @@
 #topBar {
     height: 62px;
-    width: auto;
+    width: 100%;
     background-color: red;
 
 }
 .topButton{
     float: right;
-    width: 75px;
-    height: 50px;
+    width: auto;
+    height: 38px;
     color: white;
     background-color: red;
     border: none;
@@ -15,6 +15,11 @@
     text-decoration: none;
     font-size: 16px;
     display: inline-block;
-    padding-top: 12px;
-    padding-left: 25px;
+    padding-top: 20px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+.topButton:hover {
+    background-color: darkred;
+    color: darkgrey;
 }
