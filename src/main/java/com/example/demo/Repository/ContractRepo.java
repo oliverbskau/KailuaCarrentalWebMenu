@@ -25,7 +25,7 @@ public class ContractRepo {
 
     public Contract addContract(Contract c) {
         String sql = "INSERT INTO rentalcontracts(rentalcontractid,customerid,carid) VALUES(?,?,?)";
-        template.update(sql,c.getRentalcontractid(),c.getCustomerid(),c.getCustomerid());
+        template.update(sql,c.getRentalcontractid(),c.getCustomerid(),c.getCarid());
 
         return null;
     }
