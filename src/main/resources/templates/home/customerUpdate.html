@@ -35,6 +35,8 @@
 <h1>Edit Customer</h1>
 
 <form action="/updateCustomer" method="post">
+    <label>Id</label>
+    <input type="text" name="customerid" th:value="${customer.customerid}">
     <label>First name</label>
     <input type="text" name="first_name" th:value="${customer.first_name}">
     <label>Last name</label>
