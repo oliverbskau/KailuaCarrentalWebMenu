@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="FrontPage.css">
     <style>
         input[type=text] {
             width: 100%;
@@ -31,6 +32,23 @@
     </style>
 </head>
 <body>
+<div id="topBar" >
+    <form action="/carIndex" class="topButton">
+        <button >
+            View Cars
+        </button>
+    </form>
+    <form action="/customerIndex" class="topButton">
+        <button >
+            View Customers
+        </button>
+    </form>
+    <form action="/contractIndex" class="topButton">
+        <button >
+            View Contracts
+        </button>
+    </form>
+</div>
     <h1>Assign a new contract</h1>
 
     <form action="/contractCreate" method="post">

@@ -3,8 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="FrontPage.css">
 </head>
 <body>
+<div id="topBar" >
+    <form action="/carIndex" class="topButton">
+        <button >
+            View Cars
+        </button>
+    </form>
+    <form action="/customerIndex" class="topButton">
+        <button >
+            View Customers
+        </button>
+    </form>
+    <form action="/contractIndex" class="topButton">
+        <button >
+            View Contracts
+        </button>
+    </form>
+</div>
 
 <h1>Contract details</h1>
 
@@ -18,7 +36,7 @@
     </thead>
     <tbody>
     <tr>
-        <td style="border: 1px solid black; text-align: left; padding: 4px; margin: auto" th:text=${contract.rentalcontractid}" />
+        <td style="border: 1px solid black; text-align: left; padding: 4px; margin: auto" th:text="${contract.rentalcontractid}" />
         <td style="border: 1px solid black; text-align: left; padding: 4px; margin: auto" th:text="${contract.customerid}"/>
         <td style="border: 1px solid black; text-align: left; padding: 4px; margin: auto" th:text="${contract.carid}"/>
     </tr>
