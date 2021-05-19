@@ -26,15 +26,13 @@ public class HomeController {
     @Autowired
     CustomerService customerService;
 
-
-
     //Home menu page
     @GetMapping("/")
     public String index(){
         return "home/index";
     }
 
-    //---------------------------------------------------------THIS IS CONTRACT HOME CONTROLLER--------------------------------------------------//
+    //------------------------THIS IS CONTRACT HOME CONTROLLER---------------------------//
 
     //List and see all contracts
     @GetMapping("/contractIndex")
@@ -61,7 +59,8 @@ public class HomeController {
         return "home/contractViewOne";
     }
 
-    //return to homepage once a contract is deleted. Either way if contract is deleted or not, the user will be redirected back to home page (index)
+    //return to homepage once a contract is deleted. Either way if contract is deleted or not,
+    // the user will be redirected back to home page (index)
     @GetMapping("/contractDelete/{rentalcontractid}")
     public String contractDelete(@PathVariable("rentalcontractid") int rentalcontractid){
         boolean deleted = contractService.deleteContract(rentalcontractid);
@@ -85,7 +84,7 @@ public class HomeController {
     }
 
 
-    //---------------------------------------------------------THIS IS CAR HOME CONTROLLER--------------------------------------------------//
+    //-----------------------THIS IS CAR HOME CONTROLLER----------------------//
 
     //List and see all cars
     @GetMapping("/carIndex")
@@ -113,7 +112,8 @@ public class HomeController {
         return "home/carViewOne";
     }
 
-    //return to homepage once a car is deleted. Either way if car is deleted or not, the user will be redirected back to home page (index)
+    //return to homepage once a car is deleted. Either way if car is deleted or not,
+    // the user will be redirected back to home page (index)
     @GetMapping("/carDelete/{carid}")
     public String carDelete(@PathVariable("carid") int carid){
         boolean deleted = carService.deleteCar(carid);
@@ -137,7 +137,7 @@ public class HomeController {
         return "redirect:/";
     }
 
-    //---------------------------------------------------------THIS IS CUSTOMER HOME CONTROLLER--------------------------------------------------//
+    //---------------THIS IS CUSTOMER HOME CONTROLLER---------------------//
 
     //List and see all customers
     @GetMapping("/customerIndex")
@@ -167,7 +167,8 @@ public class HomeController {
         return "home/customerViewOne";
     }
 
-    //return to homepage once a customer is deleted. Either way if customer is deleted or not, the user will be redirected back to home page (index)
+    //return to homepage once a customer is deleted. Either way if customer is deleted or not,
+    // the user will be redirected back to home page (index)
     @GetMapping("/customerDelete/{customerid}")
     public String customerDelete(@PathVariable("customerid") int customerid){
         boolean deleted = customerService.deleteCustomer(customerid);
